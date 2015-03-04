@@ -1,0 +1,10 @@
+<resources>
+
+    <color name="android_green">#a4c639</color>
+    <color name="android_blue">#39a4c6</color>
+    <color name="android_red">#c639a4</color>
+
+
+    <color name="bg_orange">#fa2</color>
+    <color name="bg_purple">#a2f</color>
+</resources>

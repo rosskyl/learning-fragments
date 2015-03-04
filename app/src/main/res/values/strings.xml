@@ -3,4 +3,8 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <string name="fragment_green">Blue Fragment</string>
+    <string name="fragment_blue">Blue Fragment</string>
+    <string name="fragment_red">Red Fragment</string>
 </resources>
