@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/android_green"
+    tools:context="com.csis290.learnfragments.GreenFragment">
+
+    <TextView
+        android:id="@+id/green_fragment_declaration"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/fragment_green_declaration"
+        android:textSize="@dimen/font_fragment_declaration" />
+
+</LinearLayout>

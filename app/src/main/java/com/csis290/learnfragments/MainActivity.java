@@ -24,7 +24,9 @@ public class MainActivity extends Activity {
         tvGreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                getFragmentManager().beginTransaction()
+                        .replace(R.id.fragment_container, new GreenFragment())
+                        .commit();
             }
         });
 

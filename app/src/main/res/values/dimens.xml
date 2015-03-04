@@ -4,4 +4,6 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
 
     <dimen name="font_button">24sp</dimen>
+
+    <dimen name="font_fragment_declaration">38sp</dimen>
 </resources>
