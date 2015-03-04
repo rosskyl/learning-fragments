@@ -32,7 +32,8 @@ proguard/
 *.iml
 *.ipr
 *.iws
-.idea/
+.idea/workspace.xml
+.idea/libraries
 
 # Meld mergetool files
 *.orig
