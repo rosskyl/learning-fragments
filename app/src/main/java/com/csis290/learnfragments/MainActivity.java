@@ -33,14 +33,16 @@ public class MainActivity extends Activity {
         tvBlue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                getFragmentManager().beginTransaction()
+                        .replace(R.id.fragment_container, new BlueFragment()).commit();
             }
         });
 
         tvRed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                getFragmentManager().beginTransaction()
+                        .replace(R.id.fragment_container, new RedFragment()).commit();
             }
         });
     }
