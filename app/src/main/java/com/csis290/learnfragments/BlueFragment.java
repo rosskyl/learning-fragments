@@ -16,10 +16,18 @@ public class BlueFragment extends Fragment {
 
     TextView tvBlue;
 
+    String message;
+
     public BlueFragment() {
         // Required empty public constructor
     }
 
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        message = getArguments().getString("message");
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -36,7 +44,7 @@ public class BlueFragment extends Fragment {
         tvBlue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tvBlue.setText("You pressed the button");
+                tvBlue.setText(message);
                 tvBlue.setBackgroundResource(R.color.secondary_text_default_material_light);
             }
         });

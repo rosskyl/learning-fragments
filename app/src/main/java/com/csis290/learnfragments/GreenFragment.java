@@ -15,10 +15,18 @@ import android.widget.TextView;
 public class GreenFragment extends Fragment {
     private TextView tvGreen;
 
+    private String message;
+
     public GreenFragment() {
         // Required empty public constructor
     }
 
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        message = getArguments().getString("key");
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -32,7 +40,8 @@ public class GreenFragment extends Fragment {
         tvGreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tvGreen.setText("Green Fragment - Best Fragment!");
+                //tvGreen.setText("Green Fragment - Best Fragment!");
+                tvGreen.setText(message);
             }
         });
     }
