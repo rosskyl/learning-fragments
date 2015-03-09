@@ -1,6 +1,7 @@
 package com.csis290.learnfragments;
 
 import android.app.Activity;
+import android.app.FragmentTransaction;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -24,9 +25,12 @@ public class MainActivity extends Activity {
             GreenFragment greenFragment = new GreenFragment();
             greenFragment.setArguments(bundle);
 
-            getFragmentManager().beginTransaction()
+            getFragmentManager()
+                    .beginTransaction()
                     .replace(R.id.fragment_container, greenFragment)
-                    .addToBackStack("").commit();
+                    .addToBackStack("")
+                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                    .commit();
         }
     };
 
@@ -88,9 +92,12 @@ public class MainActivity extends Activity {
                 BlueFragment blueFragment = new BlueFragment();
                 blueFragment.setArguments(bundle);
 
-                getFragmentManager().beginTransaction()
+                getFragmentManager()
+                        .beginTransaction()
                         .replace(R.id.fragment_container, blueFragment)
-                        .addToBackStack("").commit();
+                        .addToBackStack("")
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE)
+                        .commit();
             }//end run
         };//end inner inner class Runnable
 
@@ -122,9 +129,12 @@ public class MainActivity extends Activity {
         private Runnable redRunnable = new Runnable() {
             @Override
             public void run() {
-                getFragmentManager().beginTransaction()
+                getFragmentManager()
+                        .beginTransaction()
                         .replace(R.id.fragment_container, new RedFragment())
-                        .addToBackStack("").commit();
+                        .addToBackStack("")
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+                        .commit();
             }//end run
         };//end Runnable
 
